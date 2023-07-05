@@ -1,0 +1,140 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background-color: white;
+   width: 90%;
+   height: 590px;
+    margin: 0 auto;
+    border: 3px solid blue;
+    border-radius: 15px;
+    padding: 0 2em 1em;
+}
+
+#hiro{
+    background-color: tomato;
+}
+h1 { 
+    font-size: 150%;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: .5em;
+}
+label {
+    float: left;
+    width: 8em;
+}
+input, select { 
+    width: 10em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+input[type=checkbox] { 
+    width: 2em;
+}
+header p {
+	margin: 0 2em 1em 0;
+}
+#new_game, #player, #high_score, #correct {
+	float: left;
+}
+#cards img {
+    height: 100px;
+    width: 80px;
+    /* padding-right: 5px; */
+    /* padding-bottom: 3px; */
+    float: left; 
+}
+.clear {
+    clear: both;
+}
+
+#cards {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+    
+}
+
+
+.cards-item {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.cards-item img {
+    border-radius: 8px;
+    padding:0;
+    margin: 2px;
+}
+
+.card-before-flip,
+.card-after-flip {
+    position: absolute;
+    /* border-radius: 5px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid gainsboro;
+    border-radius: 15px;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+
+.card-before-flip {
+    background: url("./images/back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-after-flip {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+/* .cards-item.flipped .card-before-flip {
+    transform: rotateY(180deg);
+} */
+
+.cards-item.flipped .card-after-flip {
+    transform: rotateY(0deg);
+}
+
+.matched {
+    /* background: url("./images/blank.png"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#new_game{  
+    display: inline-block;
+    background-color: #007fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+p a{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+body{
+    margin-top: 10px;
+}
